@@ -635,8 +635,13 @@ def merge_json_files(existing_path: Path, new_content: dict, verbose: bool = Fal
     return merged
 
 def download_template_from_github(ai_assistant: str, download_dir: Path, *, script_type: str = "sh", verbose: bool = True, show_progress: bool = True, client: httpx.Client = None, debug: bool = False, github_token: str = None) -> Tuple[Path, dict]:
-    repo_owner = "github"
-    repo_name = "spec-kit"
+    # Allow overriding the repo via environment variable (format: "owner/repo")
+    repo_override = os.getenv("SPECKIT_REPO", "").strip()
+    if repo_override and "/" in repo_override:
+        repo_owner, repo_name = repo_override.split("/", 1)
+    else:
+        repo_owner = "github"
+        repo_name = "spec-kit"
     if client is None:
         client = httpx.Client(verify=ssl_context)
 
@@ -1307,8 +1312,12 @@ def version():
             pass
     
     # Fetch latest template release version
-    repo_owner = "github"
-    repo_name = "spec-kit"
+    repo_override = os.getenv("SPECKIT_REPO", "").strip()
+    if repo_override and "/" in repo_override:
+        repo_owner, repo_name = repo_override.split("/", 1)
+    else:
+        repo_owner = "github"
+        repo_name = "spec-kit"
     api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
     
     template_version = "unknown"
@@ -1343,6 +1352,7 @@ def version():
     info_table.add_column("Value", style="white")
 
     info_table.add_row("CLI Version", cli_version)
+    info_table.add_row("Template Repo", f"{repo_owner}/{repo_name}")
     info_table.add_row("Template Version", template_version)
     info_table.add_row("Released", release_date)
     info_table.add_row("", "")

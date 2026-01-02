@@ -295,3 +295,18 @@ Sample items:
 - Correct: Validation of requirement quality
 - Wrong: "Does it do X?"
 - Correct: "Is X clearly specified?"
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running other speckit commands
+- Implementation or code changes
+- Any follow-up actions or "next steps"
+
+This is a **discrete checklist generation task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.

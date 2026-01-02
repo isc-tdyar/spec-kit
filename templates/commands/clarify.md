@@ -182,3 +182,18 @@ Behavior rules:
 - If quota reached with unresolved high-impact categories remaining, explicitly flag them under Deferred with rationale.
 
 Context for prioritization: {ARGS}
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running `/speckit.plan` or other speckit commands
+- Implementation or code changes
+- Any follow-up actions or "next steps"
+
+This is a **discrete clarification task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.

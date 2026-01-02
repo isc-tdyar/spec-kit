@@ -31,3 +31,18 @@ git config --get remote.origin.url
 
 > [!CAUTION]
 > UNDER NO CIRCUMSTANCES EVER CREATE ISSUES IN REPOSITORIES THAT DO NOT MATCH THE REMOTE URL
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running other speckit commands
+- Implementation or code changes
+- Any follow-up actions or "next steps"
+
+This is a **discrete issue creation task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.

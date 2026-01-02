@@ -136,3 +136,17 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Report final status with summary of completed work
 
 Note: This command assumes a complete task breakdown exists in tasks.md. If tasks are incomplete or missing, suggest running `/speckit.tasks` first to regenerate the task list.
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running other speckit commands
+- Any follow-up actions or "next steps" beyond implementation
+
+This is a **discrete implementation task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.

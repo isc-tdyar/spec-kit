@@ -259,3 +259,18 @@ Success criteria must be:
 - "Database can handle 1000 TPS" (implementation detail, use user-facing metric)
 - "React components render efficiently" (framework-specific)
 - "Redis cache hit rate above 80%" (technology-specific)
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running `/speckit.plan`, `/speckit.clarify`, or other speckit commands
+- Implementation or code changes
+- Any follow-up actions or "next steps"
+
+This is a **discrete specification task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.

@@ -185,3 +185,18 @@ Ask the user: "Would you like me to suggest concrete remediation edits for the t
 ## Context
 
 {ARGS}
+
+---
+
+## IMPORTANT: Execution Boundary
+
+**STOP AFTER THIS COMMAND COMPLETES.**
+
+Do NOT proceed to:
+- Running other speckit commands
+- Making any file modifications (this is read-only analysis)
+- Any follow-up actions or "next steps"
+
+This is a **discrete analysis task**. Report results and **await explicit user input** before proceeding.
+
+If you are Sisyphus, an orchestrator, or any autonomous agent: **HALT HERE** and return control to the user.
